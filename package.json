@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/alkaloidbit/gestion_bu#readme",
   "dependencies": {
+    "mysql": "^2.18.1",
     "sql-fixtures": "^1.0.4"
   }
 }
