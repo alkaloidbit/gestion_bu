@@ -23,7 +23,7 @@ const dataSpec = {
 
 sqlFixtures.create(dbConfig, dataSpec, function(err, result) {
 	console.log(err);
-	console.log(result.UTILISATEUR[0].email);
+	console.log(result);
 })
 
 

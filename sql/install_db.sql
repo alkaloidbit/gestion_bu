@@ -3,65 +3,65 @@ CREATE DATABASE IF NOT EXISTS `GESTION_BU` DEFAULT CHARACTER SET UTF8MB4 COLLATE
 USE `GESTION_BU`;
 
 CREATE TABLE `APPARTENIR` (
-  `id_document` int(11),
-  `id_genre` int(11),
+  `id_document` int(11) NOT NULL,
+  `id_genre` int(11) NOT NULL,
   PRIMARY KEY (`id_document`, `id_genre`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `AUTEUR` (
   `id_auteur` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(50),
+  `nom` varchar(255) NOT NULL,
   PRIMARY KEY (`id_auteur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `DOCUMENT` (
   `id_document` int(11) NOT NULL AUTO_INCREMENT,
-  `titre` varchar(50),
-  `nbre_pages` smallint,
-  `id_editeur` int(11),
-  `année` date,
+  `titre` varchar(255) NOT NULL,
+  `nbre_pages` smallint NOT NULL,
+  `id_editeur` int(11) NOT NULL,
+  `année` date NOT NULL,
   PRIMARY KEY (`id_document`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `ECRIRE` (
-  `id_auteur` int(11),
-  `id_document` int(11),
+  `id_auteur` int(11) NOT NULL,
+  `id_document` int(11) NOT NULL,
   PRIMARY KEY (`id_auteur`, `id_document`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `EDITEUR` (
   `id_editeur` int(11) NOT NULL AUTO_INCREMENT,
-  `denomination` varchar(50),
+  `denomination` varchar(255) NOT NULL,
   PRIMARY KEY (`id_editeur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `EMPRUNT` (
   `id_emprunt` int(11) NOT NULL AUTO_INCREMENT,
-  `date_emprunt` date,
-  `date_retour` date,
-  `id_exemplaire` int(11),
+  `date_emprunt` date NOT NULL,
+  `date_retour` date NOT NULL,
+  `id_exemplaire` int(11) NOT NULL,
   PRIMARY KEY (`id_emprunt`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `EXEMPLAIRE` (
   `id_exemplaire` int(11) NOT NULL AUTO_INCREMENT,
-  `id_document` int(11),
+  `id_document` int(11) NOT NULL,
   PRIMARY KEY (`id_exemplaire`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `GENRE` (
   `id_genre` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(50),
+  `nom` varchar(255) NOT NULL,
   PRIMARY KEY (`id_genre`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `UTILISATEUR` (
   `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT,
   `id_profile` int(11),
-  `nom` varchar(255),
-  `prenom` varchar (255),
-  `email` varchar (255),
-  `password` varchar (255),
+  `nom` varchar(255) NOT NULL,
+  `prenom` varchar (255) NOT NULL,
+  `email` varchar (255) NOT NULL,
+  `password` varchar (255) NOT NULL,
   PRIMARY KEY (`id_utilisateur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
