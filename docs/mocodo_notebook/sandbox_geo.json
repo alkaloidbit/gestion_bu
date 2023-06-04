@@ -1,0 +1,43 @@
+{
+  "width": 719,
+  "height": 303,
+  "cx": [
+    [ "Genre", 67 ],
+    [ "Correspondre", 208 ],
+    [ "Exemplaire", 370 ],
+    [ "Concerner", 517 ],
+    [ "Emprunt", 657 ],
+    [ "Appartenir", 67 ],
+    [ "Document", 208 ],
+    [ "Publier", 370 ],
+    [ "Auteur", 67 ],
+    [ "Ecrire", 208 ],
+    [ "Editeur", 370 ]
+  ],
+  "cy": [
+    [ "Genre", 56 ],
+    [ "Correspondre", 56 ],
+    [ "Exemplaire", 56 ],
+    [ "Concerner", 56 ],
+    [ "Emprunt", 56 ],
+    [ "Appartenir", 156 ],
+    [ "Document", 156 ],
+    [ "Publier", 156 ],
+    [ "Auteur", 256 ],
+    [ "Ecrire", 256 ],
+    [ "Editeur", 256 ]
+  ],
+  "shift": [
+    [ "Correspondre,Document,0", 0 ],
+    [ "Correspondre,Exemplaire,0", 0 ],
+    [ "Concerner,Emprunt,0", 0 ],
+    [ "Concerner,Exemplaire,0", 0 ],
+    [ "Appartenir,Document,0", 0 ],
+    [ "Appartenir,Genre,0", 0 ],
+    [ "Publier,Document,0", 0 ],
+    [ "Publier,Editeur,0", 0 ],
+    [ "Ecrire,Auteur,0", 0 ],
+    [ "Ecrire,Document,0", 0 ]
+  ],
+  "ratio": []
+}

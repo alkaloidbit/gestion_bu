@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>Appartenir</span> (
+    <span class='foreign primary'>#id_document</span>,
+    <span class='foreign primary'>#id_genre</span>
+  )
+</div>
+<div>
+  <span class='relation'>Auteur</span> (
+    <span class='primary'>id_auteur</span>,
+    <span class='normal'>nom</span>
+  )
+</div>
+<div>
+  <span class='relation'>Document</span> (
+    <span class='primary'>id_document</span>,
+    <span class='normal'>titre</span>,
+    <span class='normal'>nbre_pages</span>,
+    <span class='foreign'>#id_editeur</span>,
+    <span class='normal'>Année</span>
+  )
+</div>
+<div>
+  <span class='relation'>Ecrire</span> (
+    <span class='foreign primary'>#id_auteur</span>,
+    <span class='foreign primary'>#id_document</span>
+  )
+</div>
+<div>
+  <span class='relation'>Editeur</span> (
+    <span class='primary'>id_editeur</span>,
+    <span class='normal'>denomination</span>
+  )
+</div>
+<div>
+  <span class='relation'>Emprunt</span> (
+    <span class='primary'>id_emprunt</span>,
+    <span class='normal'>date_emprunt</span>,
+    <span class='normal'>date_retour</span>,
+    <span class='foreign'>#id_exemplaire</span>
+  )
+</div>
+<div>
+  <span class='relation'>Exemplaire</span> (
+    <span class='primary'>id_exemplaire</span>,
+    <span class='foreign'>#id_document</span>
+  )
+</div>
+<div>
+  <span class='relation'>Genre</span> (
+    <span class='primary'>id_genre</span>,
+    <span class='normal'>nom</span>
+  )
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+Genre: id_genre [int(11)], nom [varchar(50)]
+Correspondre, 0N Document, 11 Exemplaire
+Exemplaire: id_exemplaire [int(11)]
+Concerner, 11 Emprunt, 0N Exemplaire
+Emprunt:id_emprunt [int(11)], date_emprunt [date], date_retour [date]
+
+Appartenir, 1N Document, 0N Genre
+Document: id_document [int(11)], titre [varchar(50)], nbre_pages [smallint]
+Publier, 11 Document, 0N Editeur: Année [date]
+:
+:
+
+Auteur: id_auteur [int(11)], nom [varchar(50)]
+Ecrire, 0N Auteur, 1N Document
+Editeur: id_editeur [int(11)], denomination [varchar(50)]
+:
+:
