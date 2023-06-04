@@ -1,6 +1,6 @@
 {
   "width": 719,
-  "height": 303,
+  "height": 337,
   "cx": [
     [ "Genre", 67 ],
     [ "Correspondre", 208 ],
@@ -12,7 +12,8 @@
     [ "Publier", 370 ],
     [ "Auteur", 67 ],
     [ "Ecrire", 208 ],
-    [ "Editeur", 370 ]
+    [ "Editeur", 370 ],
+    [ "Utilisateur", 517 ]
   ],
   "cy": [
     [ "Genre", 56 ],
@@ -25,7 +26,8 @@
     [ "Publier", 156 ],
     [ "Auteur", 256 ],
     [ "Ecrire", 256 ],
-    [ "Editeur", 256 ]
+    [ "Editeur", 256 ],
+    [ "Utilisateur", 256 ]
   ],
   "shift": [
     [ "Correspondre,Document,0", 0 ],

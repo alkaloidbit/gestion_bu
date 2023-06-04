@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="719" height="303" viewBox="0 0 719 303" xmlns="http://www.w3.org/2000/svg">
-<rect id="frame" x="0" y="0" width="719" height="303" fill="#FFF" stroke="none" stroke-width="0"/>
+<svg width="719" height="337" viewBox="0 0 719 337" xmlns="http://www.w3.org/2000/svg">
+<rect id="frame" x="0" y="0" width="719" height="337" fill="#FFF" stroke="none" stroke-width="0"/>
 
 <!-- Association Correspondre -->
 <g>
@@ -161,5 +161,23 @@
 	<text x="327" y="265.1" fill="#000" font-family="Gill Sans" font-size="15">id_editeur</text>
 	<line x1="327" y1="268" x2="392" y2="268" stroke="#000" stroke-width="1"/>
 	<text x="327" y="282.1" fill="#000" font-family="Gill Sans" font-size="15">denomination</text>
+</g>
+
+<!-- Entity Utilisateur -->
+<g>
+	<g>
+		<rect x="455" y="184" width="124" height="30" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
+		<rect x="455" y="214" width="124" height="114" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
+		<rect x="455" y="184" width="124" height="144" fill="none" stroke="#000" stroke-width="1.5" opacity="1"/>
+		<line x1="455" y1="214" x2="579" y2="214" stroke="#000" stroke-width="1.5"/>
+	</g>
+	<text x="464" y="205.3" fill="#000" font-family="Copperplate" font-size="18">Utilisateur</text>
+	<text x="463" y="231.1" fill="#000" font-family="Gill Sans" font-size="15">id_utilisateur</text>
+	<line x1="463" y1="234" x2="545" y2="234" stroke="#000" stroke-width="1"/>
+	<text x="463" y="248.1" fill="#000" font-family="Gill Sans" font-size="15">id_profile</text>
+	<text x="463" y="265.1" fill="#000" font-family="Gill Sans" font-size="15">nom</text>
+	<text x="463" y="282.1" fill="#000" font-family="Gill Sans" font-size="15">prenom</text>
+	<text x="463" y="299" fill="#000" font-family="Gill Sans" font-size="15">email</text>
+	<text x="463" y="316" fill="#000" font-family="Gill Sans" font-size="15">password</text>
 </g>
 </svg>

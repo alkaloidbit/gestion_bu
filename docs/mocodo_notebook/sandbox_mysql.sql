@@ -54,6 +54,16 @@ CREATE TABLE `GENRE` (
   PRIMARY KEY (`id_genre`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
+CREATE TABLE `UTILISATEUR` (
+  `id_utilisateur` int(11),
+  `id_profile` int(11),
+  `nom` varchar(255),
+  `prenom` varchar (255),
+  `email` varchar (255),
+  `password` varchar (255),
+  PRIMARY KEY (`id_utilisateur`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
 ALTER TABLE `APPARTENIR` ADD FOREIGN KEY (`id_genre`) REFERENCES `GENRE` (`id_genre`);
 ALTER TABLE `APPARTENIR` ADD FOREIGN KEY (`id_document`) REFERENCES `DOCUMENT` (`id_document`);
 ALTER TABLE `DOCUMENT` ADD FOREIGN KEY (`id_editeur`) REFERENCES `EDITEUR` (`id_editeur`);

@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS `GESTION_BU`;
 CREATE DATABASE IF NOT EXISTS `GESTION_BU` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_general_ci;
 USE `GESTION_BU`;
 
@@ -52,6 +53,16 @@ CREATE TABLE `GENRE` (
   `id_genre` int(11),
   `nom` varchar(50),
   PRIMARY KEY (`id_genre`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+CREATE TABLE `UTILISATEUR` (
+  `id_utilisateur` int(11),
+  `id_profile` int(11),
+  `nom` varchar(255),
+  `prenom` varchar (255),
+  `email` varchar (255),
+  `password` varchar (255),
+  PRIMARY KEY (`id_utilisateur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 ALTER TABLE `APPARTENIR` ADD FOREIGN KEY (`id_genre`) REFERENCES `GENRE` (`id_genre`);
