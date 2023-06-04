@@ -9,13 +9,13 @@ CREATE TABLE `APPARTENIR` (
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `AUTEUR` (
-  `id_auteur` int(11),
+  `id_auteur` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(50),
   PRIMARY KEY (`id_auteur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `DOCUMENT` (
-  `id_document` int(11),
+  `id_document` int(11) NOT NULL AUTO_INCREMENT,
   `titre` varchar(50),
   `nbre_pages` smallint,
   `id_editeur` int(11),
@@ -30,13 +30,13 @@ CREATE TABLE `ECRIRE` (
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `EDITEUR` (
-  `id_editeur` int(11),
+  `id_editeur` int(11) NOT NULL AUTO_INCREMENT,
   `denomination` varchar(50),
   PRIMARY KEY (`id_editeur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `EMPRUNT` (
-  `id_emprunt` int(11),
+  `id_emprunt` int(11) NOT NULL AUTO_INCREMENT,
   `date_emprunt` date,
   `date_retour` date,
   `id_exemplaire` int(11),
@@ -44,19 +44,19 @@ CREATE TABLE `EMPRUNT` (
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `EXEMPLAIRE` (
-  `id_exemplaire` int(11),
+  `id_exemplaire` int(11) NOT NULL AUTO_INCREMENT,
   `id_document` int(11),
   PRIMARY KEY (`id_exemplaire`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `GENRE` (
-  `id_genre` int(11),
+  `id_genre` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(50),
   PRIMARY KEY (`id_genre`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `UTILISATEUR` (
-  `id_utilisateur` int(11),
+  `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT,
   `id_profile` int(11),
   `nom` varchar(255),
   `prenom` varchar (255),
