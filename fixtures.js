@@ -13,7 +13,6 @@ const dbConfig = {
 
 const dataSpec = {
 	UTILISATEUR: {
-		id_profile: 1,
 		nom: 'oudjoudi',
 		prenom: 'frederic',
 		email: 'fredoudjoudi@gmail.com',
