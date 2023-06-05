@@ -57,7 +57,7 @@ CREATE TABLE `GENRE` (
 
 CREATE TABLE `UTILISATEUR` (
   `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT,
-  `id_profile` int(11),
+  `is_admin` boolean,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar (255) NOT NULL,
   `email` varchar (255) NOT NULL,
