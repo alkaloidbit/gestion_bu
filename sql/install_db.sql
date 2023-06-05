@@ -9,8 +9,9 @@ CREATE TABLE `APPARTENIR` (
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `AUTEUR` (
-  `id_auteur` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) NOT NULL,
+  `id_auteur` int(11),
+  `nom` varchar(50),
+  `prenom` varchar(50),
   PRIMARY KEY (`id_auteur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 

@@ -10,6 +10,7 @@ CREATE TABLE `APPARTENIR` (
 CREATE TABLE `AUTEUR` (
   `id_auteur` int(11),
   `nom` varchar(50),
+  `prenom` varchar(50),
   PRIMARY KEY (`id_auteur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 

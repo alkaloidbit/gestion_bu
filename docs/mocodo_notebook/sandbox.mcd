@@ -9,7 +9,7 @@ Publier, 11 Document, 0N Editeur: Année [date]
 :
 :
 
-Auteur: id_auteur [int(11)], nom [varchar(50)]
+Auteur: id_auteur [int(11)], nom [varchar(50)], prenom [varchar(50)]
 Ecrire, 0N Auteur, 1N Document
 Editeur: id_editeur [int(11)], denomination [varchar(50)]
 Utilisateur: id_utilisateur [int(11)], is_admin [boolean], nom [varchar(255)], prenom [varchar (255)], email [varchar (255)], password [varchar (255)]
