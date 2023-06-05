@@ -8,22 +8,22 @@ INSERT INTO `user` (`id_user`, `is_admin`, `name`, `surname`, `email`, `password
 -- Editor --
 INSERT INTO `edition` (`id_edition`, `name`) VALUES (NULL, 'Hoboken, NJ : John Wiley & Sons, Inc.');
 -- Document --
-INSERT INTO `document` (`id_document`, `titre`, `nbre_pages`, `id_edition`, `année`) VALUES (NULL, 'Beginning programming with Python ', '392', '1', '2018');
+INSERT INTO `document` (`id_document`, `title`, `pages_nbr`, `id_edition`, `year`) VALUES (NULL, 'Beginning programming with Python ', '392', '1', '2018');
 -- author --
 INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Mueller', 'John Paul');
 -- Now we need to populate the ECRIRE table to associate Document and author
-INSERT INTO `ecrire` (`id_author`, `id_document`) VALUES ('1', '1');
+INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('1', '1');
 
 
 -- Editor --
 INSERT INTO `edition` (`id_edition`, `name`) VALUES (NULL, 'Birmingham, UK : Packt Publishing');
 -- Document --
-INSERT INTO `document` (`id_document`, `titre`, `nbre_pages`, `id_edition`, `année`) VALUES (
+INSERT INTO `document` (`id_document`, `title`, `pages_nbr`, `id_edition`, `year`) VALUES (
   NULL, 'Python 3 object-oriented programming ', '452', '2', '2018');
 -- author --
 INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Dusty', 'Phillips');
 -- Now we need to populate the ECRIRE table to associate Document and author
-INSERT INTO `ecrire` (`id_author`, `id_document`) VALUES ('2', '2');
+INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('2', '2');
 
 
 -- Genre --
