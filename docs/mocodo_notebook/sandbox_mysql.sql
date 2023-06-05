@@ -56,7 +56,7 @@ CREATE TABLE `GENRE` (
 
 CREATE TABLE `UTILISATEUR` (
   `id_utilisateur` int(11),
-  `id_profile` int(11),
+  `is_admin` boolean,
   `nom` varchar(255),
   `prenom` varchar (255),
   `email` varchar (255),

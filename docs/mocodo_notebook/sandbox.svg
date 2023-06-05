@@ -161,7 +161,7 @@
 	<text x="464" y="196.3" fill="#000" font-family="Copperplate" font-size="18">Utilisateur</text>
 	<text x="463" y="222.1" fill="#000" font-family="Gill Sans" font-size="15">id_utilisateur</text>
 	<line x1="463" y1="225" x2="545" y2="225" stroke="#000" stroke-width="1"/>
-	<text x="463" y="239.1" fill="#000" font-family="Gill Sans" font-size="15">id_profile</text>
+	<text x="463" y="239.1" fill="#000" font-family="Gill Sans" font-size="15">is_admin</text>
 	<text x="463" y="256.1" fill="#000" font-family="Gill Sans" font-size="15">nom</text>
 	<text x="463" y="273.1" fill="#000" font-family="Gill Sans" font-size="15">prenom</text>
 	<text x="463" y="290" fill="#000" font-family="Gill Sans" font-size="15">email</text>
