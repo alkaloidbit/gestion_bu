@@ -35,12 +35,12 @@ CREATE TABLE `EDITEUR` (
   PRIMARY KEY (`id_editeur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
-CREATE TABLE `EMPRUNT` (
-  `id_emprunt` int(11) NOT NULL AUTO_INCREMENT,
-  `date_emprunt` date NOT NULL,
-  `date_retour` date NOT NULL,
-  `id_exemplaire` int(11) NOT NULL,
-  PRIMARY KEY (`id_emprunt`)
+CREATE TABLE `EMPRUNTER` (
+  `id_exemplaire` int(11),
+  `id_utilisateur` int(11),
+  `date_emprunt` date,
+  `date_retour` date,
+  PRIMARY KEY (`id_exemplaire`, `id_utilisateur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 
 CREATE TABLE `EXEMPLAIRE` (
@@ -64,11 +64,12 @@ CREATE TABLE `UTILISATEUR` (
   `password` varchar (255) NOT NULL,
   PRIMARY KEY (`id_utilisateur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
-
+ALTER TABLE `UTILISATEUR` ADD CONSTRAINT UNIQ_8567 UNIQUE(`email`);
 ALTER TABLE `APPARTENIR` ADD FOREIGN KEY (`id_genre`) REFERENCES `GENRE` (`id_genre`);
 ALTER TABLE `APPARTENIR` ADD FOREIGN KEY (`id_document`) REFERENCES `DOCUMENT` (`id_document`);
 ALTER TABLE `DOCUMENT` ADD FOREIGN KEY (`id_editeur`) REFERENCES `EDITEUR` (`id_editeur`);
 ALTER TABLE `ECRIRE` ADD FOREIGN KEY (`id_document`) REFERENCES `DOCUMENT` (`id_document`);
 ALTER TABLE `ECRIRE` ADD FOREIGN KEY (`id_auteur`) REFERENCES `AUTEUR` (`id_auteur`);
-ALTER TABLE `EMPRUNT` ADD FOREIGN KEY (`id_exemplaire`) REFERENCES `EXEMPLAIRE` (`id_exemplaire`);
+ALTER TABLE `EMPRUNTER` ADD FOREIGN KEY (`id_utilisateur`) REFERENCES `UTILISATEUR` (`id_utilisateur`);
+ALTER TABLE `EMPRUNTER` ADD FOREIGN KEY (`id_exemplaire`) REFERENCES `EXEMPLAIRE` (`id_exemplaire`);
 ALTER TABLE `EXEMPLAIRE` ADD FOREIGN KEY (`id_document`) REFERENCES `DOCUMENT` (`id_document`);
