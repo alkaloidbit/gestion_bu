@@ -11,56 +11,68 @@
 <body>
 <div id='mld'>
 <div>
-  <span class='relation'>Appartenir</span> (
+  <span class='relation'>author</span> (
+    <span class='primary'>id_author</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>surname</span>
+  )
+</div>
+<div>
+  <span class='relation'>belongs</span> (
     <span class='foreign primary'>#id_document</span>,
     <span class='foreign primary'>#id_genre</span>
   )
 </div>
 <div>
-  <span class='relation'>Auteur</span> (
-    <span class='primary'>id_auteur</span>,
-    <span class='normal'>nom</span>
+  <span class='relation'>borrow</span> (
+    <span class='foreign primary'>#id_copy</span>,
+    <span class='foreign primary'>#id_user</span>,
+    <span class='normal'>borrowing_start</span>,
+    <span class='normal'>borrowing_end</span>
   )
 </div>
 <div>
-  <span class='relation'>Document</span> (
-    <span class='primary'>id_document</span>,
-    <span class='normal'>titre</span>,
-    <span class='normal'>nbre_pages</span>,
-    <span class='foreign'>#id_editeur</span>,
-    <span class='normal'>Année</span>
-  )
-</div>
-<div>
-  <span class='relation'>Ecrire</span> (
-    <span class='foreign primary'>#id_auteur</span>,
+  <span class='relation'>compose</span> (
+    <span class='foreign primary'>#id_author</span>,
     <span class='foreign primary'>#id_document</span>
   )
 </div>
 <div>
-  <span class='relation'>Editeur</span> (
-    <span class='primary'>id_editeur</span>,
-    <span class='normal'>denomination</span>
-  )
-</div>
-<div>
-  <span class='relation'>Emprunt</span> (
-    <span class='primary'>id_emprunt</span>,
-    <span class='normal'>date_emprunt</span>,
-    <span class='normal'>date_retour</span>,
-    <span class='foreign'>#id_exemplaire</span>
-  )
-</div>
-<div>
-  <span class='relation'>Exemplaire</span> (
-    <span class='primary'>id_exemplaire</span>,
+  <span class='relation'>copy</span> (
+    <span class='primary'>id_copy</span>,
     <span class='foreign'>#id_document</span>
   )
 </div>
 <div>
-  <span class='relation'>Genre</span> (
+  <span class='relation'>document</span> (
+    <span class='primary'>id_document</span>,
+    <span class='normal'>title</span>,
+    <span class='normal'>pages_nbr</span>,
+    <span class='normal'></span>,
+    <span class='foreign'>#id_edition</span>,
+    <span class='normal'>year</span>
+  )
+</div>
+<div>
+  <span class='relation'>edition</span> (
+    <span class='primary'>id_edition</span>,
+    <span class='normal'>name</span>
+  )
+</div>
+<div>
+  <span class='relation'>genre</span> (
     <span class='primary'>id_genre</span>,
-    <span class='normal'>nom</span>
+    <span class='normal'>name</span>
+  )
+</div>
+<div>
+  <span class='relation'>user</span> (
+    <span class='primary'>id_user</span>,
+    <span class='normal'>is_admin</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>surname</span>,
+    <span class='normal'>email</span>,
+    <span class='normal'>password</span>
   )
 </div>
 </div>
