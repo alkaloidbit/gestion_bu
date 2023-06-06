@@ -1,5 +1,6 @@
 # gestion_bu
 
+check [project wiki](https://github.com/alkaloidbit/gestion_bu/wiki) for more info
 ## Mini-Projet:
 ### Gestion d'une bibliothèque universitaire
 
