@@ -1,22 +1,22 @@
 {
-  "width": 525,
+  "width": 524,
   "height": 344,
   "cx": [
     [ "genre", 54 ],
-    [ "Correspond", 182 ],
-    [ "copy", 307 ],
-    [ "borrow", 428 ],
+    [ "correspond", 181 ],
+    [ "copy", 306 ],
+    [ "borrow", 427 ],
     [ "belongs", 54 ],
-    [ "document", 182 ],
-    [ "publish", 307 ],
+    [ "document", 181 ],
+    [ "publish", 306 ],
     [ "author", 54 ],
-    [ "compose", 182 ],
-    [ "edition", 307 ],
-    [ "user", 428 ]
+    [ "compose", 181 ],
+    [ "edition", 306 ],
+    [ "user", 427 ]
   ],
   "cy": [
     [ "genre", 47 ],
-    [ "Correspond", 47 ],
+    [ "correspond", 47 ],
     [ "copy", 47 ],
     [ "borrow", 47 ],
     [ "belongs", 155 ],
@@ -28,8 +28,8 @@
     [ "user", 263 ]
   ],
   "shift": [
-    [ "Correspond,document,0", 0 ],
-    [ "Correspond,copy,0", 0 ],
+    [ "correspond,document,0", 0 ],
+    [ "correspond,copy,0", 0 ],
     [ "borrow,copy,0", 0 ],
     [ "borrow,user,0", 0 ],
     [ "belongs,document,0", 0 ],

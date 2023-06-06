@@ -1,5 +1,5 @@
 genre: id_genre [int(11)], name [varchar(50)]
-Correspond, 0N document, 11 copy
+correspond, 0N document, 11 copy
 copy: id_copy [int(11)]
 borrow, 0N copy, 0N user: borrowing_start [date], borrowing_end [date]
 
