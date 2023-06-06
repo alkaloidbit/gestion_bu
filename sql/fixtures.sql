@@ -13,6 +13,10 @@ INSERT INTO `document` (`id_document`, `title`, `pages_nbr`, `id_edition`, `year
 INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Mueller', 'John Paul');
 -- Now we need to populate the ECRIRE table to associate Document and author
 INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('1', '1');
+-- Genre --
+INSERT INTO `genre` (`id_genre`, `name`) VALUES (NULL, 'For dummies');
+
+INSERT INTO `belongs` (`id_document`, `id_genre`) VALUES (1, 1);
 
 
 -- Editor --
@@ -25,8 +29,5 @@ INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Dusty', 'Ph
 -- Now we need to populate the ECRIRE table to associate Document and author
 INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('2', '2');
 
-
--- Genre --
-INSERT INTO `genre` (`id_genre`, `name`) VALUES (NULL, 'For dummies');
 
 
