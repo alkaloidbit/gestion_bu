@@ -1,8 +1,7 @@
-# gestion_bu
+#  Gestion d'une bibliothèque universitaire
 
-check [project wiki](https://github.com/alkaloidbit/gestion_bu/wiki) for more info
-## Projet: Gestion d'une bibliothèque universitaire
-### But:
+check [project wiki](https://github.com/alkaloidbit/gestion_bu/wiki) for more info about work in progress
+## Projet:
 Mettre en place une application Java qui organise les documents de types livres et romans
 d’une bibliothèque universitaire.
 Un document est caractérisé par les informations suivantes (Vous pouvez ajouter d’autres) :
