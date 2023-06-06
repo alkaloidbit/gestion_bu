@@ -59,8 +59,8 @@ CREATE TABLE `genre` (
 CREATE TABLE `user` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
   `is_admin` boolean NOT NULL DEFAULT false,
-  `name` varchar(255) NOT NULL,
-  `surname` varchar (255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar (255) NOT NULL,
   `email` varchar (255) NOT NULL,
   `password` varchar (255) NOT NULL,
   PRIMARY KEY (`id_user`)
