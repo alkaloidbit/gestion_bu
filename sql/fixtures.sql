@@ -11,11 +11,11 @@ INSERT INTO `edition` (`id_edition`, `name`) VALUES (NULL, 'Hoboken, NJ : John W
 INSERT INTO `document` (`id_document`, `title`, `pages_nbr`, `id_edition`, `year`) VALUES (NULL, 'Beginning programming with Python ', '392', '1', '2018');
 -- author --
 INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Mueller', 'John Paul');
--- Now we need to populate the ECRIRE table to associate Document and author
+-- compose --
 INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('1', '1');
 -- Genre --
 INSERT INTO `genre` (`id_genre`, `name`) VALUES (NULL, 'For dummies');
-
+-- belongs --
 INSERT INTO `belongs` (`id_document`, `id_genre`) VALUES (1, 1);
 
 
@@ -26,7 +26,7 @@ INSERT INTO `document` (`id_document`, `title`, `pages_nbr`, `id_edition`, `year
   NULL, 'Python 3 object-oriented programming ', '452', '2', '2018');
 -- author --
 INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Dusty', 'Phillips');
--- Now we need to populate the ECRIRE table to associate Document and author
+-- compose --
 INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('2', '2');
 
 
@@ -37,7 +37,7 @@ INSERT INTO `document` (`id_document`, `title`, `pages_nbr`, `id_edition`, `year
   NULL, 'Dive into Python 3', '360', '3', '2008');
 -- author --
 INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Mark', 'Pilgrim');
--- Now we need to populate the ECRIRE table to associate Document and author
+-- compose --
 INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('3', '3');
 
 INSERT INTO `genre` (`id_genre`, `name`) VALUES (NULL, "The expert's voice in open source");
