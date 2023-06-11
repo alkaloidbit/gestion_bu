@@ -30,4 +30,18 @@ INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Dusty', 'Ph
 INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('2', '2');
 
 
+-- Editor --
+INSERT INTO `edition` (`id_edition`, `name`) VALUES (NULL, "[New York] : Apress");
+-- Document --
+INSERT INTO `document` (`id_document`, `title`, `pages_nbr`, `id_edition`, `year`) VALUES (
+  NULL, 'Dive into Python 3', '360', '3', '2008');
+-- author --
+INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Mark', 'Pilgrim');
+-- Now we need to populate the ECRIRE table to associate Document and author
+INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('3', '3');
+
+INSERT INTO `genre` (`id_genre`, `name`) VALUES (NULL, "The expert's voice in open source");
+
+INSERT INTO `belongs` (`id_document`, `id_genre`) VALUES (3, 2);
+
 
