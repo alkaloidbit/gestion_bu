@@ -1,3 +1,5 @@
+package gestion_bu;
+
 import javax.swing.*;
 import java.awt.event.*;
 public class TestSwingComponent extends JFrame{

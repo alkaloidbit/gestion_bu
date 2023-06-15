@@ -10,8 +10,8 @@ CREATE TABLE `belongs` (
 
 CREATE TABLE `author` (
   `id_author` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50),
-  `surname` varchar(50),
+  `first_name` varchar(50),
+  `last_name` varchar(50),
   PRIMARY KEY (`id_author`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 

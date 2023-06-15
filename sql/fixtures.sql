@@ -10,7 +10,7 @@ INSERT INTO `edition` (`id_edition`, `name`) VALUES (NULL, 'Hoboken, NJ : John W
 -- Document --
 INSERT INTO `document` (`id_document`, `title`, `pages_nbr`, `id_edition`, `year`) VALUES (NULL, 'Beginning programming with Python ', '392', '1', '2018');
 -- author --
-INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Mueller', 'John Paul');
+INSERT INTO `author` (`id_author`, `first_name`, `last_name`) VALUES (NULL, 'Mueller', 'John Paul');
 -- compose --
 INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('1', '1');
 -- Genre --
@@ -25,7 +25,7 @@ INSERT INTO `edition` (`id_edition`, `name`) VALUES (NULL, 'Birmingham, UK : Pac
 INSERT INTO `document` (`id_document`, `title`, `pages_nbr`, `id_edition`, `year`) VALUES (
   NULL, 'Python 3 object-oriented programming ', '452', '2', '2018');
 -- author --
-INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Dusty', 'Phillips');
+INSERT INTO `author` (`id_author`, `first_name`, `last_name`) VALUES (NULL, 'Dusty', 'Phillips');
 -- compose --
 INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('2', '2');
 
@@ -36,7 +36,7 @@ INSERT INTO `edition` (`id_edition`, `name`) VALUES (NULL, "[New York] : Apress"
 INSERT INTO `document` (`id_document`, `title`, `pages_nbr`, `id_edition`, `year`) VALUES (
   NULL, 'Dive into Python 3', '360', '3', '2008');
 -- author --
-INSERT INTO `author` (`id_author`, `name`, `surname`) VALUES (NULL, 'Mark', 'Pilgrim');
+INSERT INTO `author` (`id_author`, `first_name`, `last_name`) VALUES (NULL, 'Mark', 'Pilgrim');
 -- compose --
 INSERT INTO `compose` (`id_author`, `id_document`) VALUES ('3', '3');
 
