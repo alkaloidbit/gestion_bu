@@ -14,5 +14,8 @@ public class Main {
                         result.getString("last_name"),
                         result.getString("email")));
         }
+
+        DAO<Author> authorDAO = new AuthorDAO();
+        System.out.println(authorDAO.find(2));
     }
 }
