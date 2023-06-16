@@ -5,6 +5,7 @@ public class Author {
     private int id;
 
     private String first_name;
+    private String last_name;
 
     public Author() {}
 
@@ -38,5 +39,12 @@ public class Author {
         this.last_name = last_name;
     }
 
-    private String last_name;
+    public String toString(){
+        String str =     "NOM : " + this.getLast_name() + "\n";
+        str +=             "PRENOM : " + this.getFirst_name() + "\n";
+        str +=            "\n.....................................\n";
+
+        return str;
+    }
+
 }

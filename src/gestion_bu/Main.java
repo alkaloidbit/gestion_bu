@@ -16,6 +16,7 @@ public class Main {
         }
 
         DAO<Author> authorDAO = new AuthorDAO();
-        System.out.println(authorDAO.find(2));
+        for(int i=1; i<=2; i++)
+            System.out.println(authorDAO.find(i));
     }
 }
