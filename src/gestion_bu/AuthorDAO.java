@@ -1,7 +1,9 @@
 package gestion_bu;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class AuthorDAO extends DAO<Author> {
 
@@ -31,7 +33,25 @@ public class AuthorDAO extends DAO<Author> {
 
     @Override
     public Author create(Author obj) {
-        return null;
+        try {
+            PreparedStatement prepare = this.connect
+                    .prepareStatement(
+                            "INSERT INTO author (first_name, last_name) VALUES(?, ?)",
+                            Statement.RETURN_GENERATED_KEYS
+                    );
+            prepare.setString(1, obj.getLast_name());
+            prepare.setString(2, obj.getFirst_name());
+
+            prepare.executeUpdate();
+            ResultSet rs = prepare.getGeneratedKeys();
+            if (rs != null && rs.next()) {
+                int key = rs.getInt(1);
+                obj = this.find(key);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return obj;
     }
 
     @Override
