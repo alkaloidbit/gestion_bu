@@ -25,9 +25,9 @@ public class Main {
         for (int i = 1; i <= 2; i++)
             System.out.println(userDAO.find(i));
 
-        User user = userDAO.login("fredoudjoudi@gmail.com", "aliboulala");
+        User user = userDAO.login("fredoudjoudi@gmail.com", "foo");
 
-        System.out.println();
+        System.out.println(user);
 
 
     }
