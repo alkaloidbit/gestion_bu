@@ -2,8 +2,8 @@
 USE `gestion_bu`;
 
 -- Users --
-INSERT INTO `user` (`id_user`, `is_admin`, `first_name`, `last_name`, `email`, `password`) VALUES (NULL, '1', 'Oudjoudi', 'Frédéric', 'fredoudjoudi@gmail.com', 'aliboulala');
-INSERT INTO `user` (`id_user`, `is_admin`, `first_name`, `last_name`, `email`, `password`) VALUES (NULL, '0', 'Roberts', 'Clive', 'cliveroberts@sql-university.com', 'password');
+INSERT INTO `user` (`id_user`, `is_admin`, `first_name`, `last_name`, `email`, `passwd`) VALUES (NULL, '1', 'Oudjoudi', 'Frédéric', 'fredoudjoudi@gmail.com', 'aliboulala');
+INSERT INTO `user` (`id_user`, `is_admin`, `first_name`, `last_name`, `email`, `passwd`) VALUES (NULL, '0', 'Roberts', 'Clive', 'cliveroberts@sql-university.com', 'passwd');
 
 -- Editor --
 INSERT INTO `edition` (`id_edition`, `name`) VALUES (NULL, 'Hoboken, NJ : John Wiley & Sons, Inc.');

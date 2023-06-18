@@ -1,4 +1,4 @@
-package gestion_bu;
+package gestion_bu.model;
 
 import org.mariadb.jdbc.Connection;
 import java.sql.DriverManager;

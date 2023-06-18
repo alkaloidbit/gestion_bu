@@ -1,5 +1,11 @@
 package gestion_bu;
 
+import gestion_bu.model.Author;
+import gestion_bu.model.User;
+import gestion_bu.model.DAO;
+import gestion_bu.model.DAOModel.AuthorDAO;
+import gestion_bu.model.DAOModel.UserDAO;
+
 import java.sql.*;
 
 public class Main {
@@ -13,5 +19,12 @@ public class Main {
         a.setLast_name("Badlieutenant");
 
         authorDAO.create(a);
+
+        DAO<User> userDAO = new UserDAO();
+        for (int i = 1; i <= 2; i++)
+            System.out.println(userDAO.find(i));
+
+        userDAO.login("fredoudjoudi@gmail.com", "aliboulala");
+
     }
 }

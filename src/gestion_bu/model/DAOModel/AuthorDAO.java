@@ -1,4 +1,7 @@
-package gestion_bu;
+package gestion_bu.model.DAOModel;
+
+import gestion_bu.model.DAO;
+import gestion_bu.model.Author;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

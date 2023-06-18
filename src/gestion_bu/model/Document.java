@@ -1,4 +1,4 @@
-package gestion_bu;
+package gestion_bu.model;
 
 public class Document {
     private int id;

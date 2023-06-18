@@ -1,5 +1,7 @@
-package gestion_bu;
+package gestion_bu.model;
 
+
+import gestion_bu.model.ConnectionMariaDB;
 
 import java.sql.Connection;
 

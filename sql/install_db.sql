@@ -62,7 +62,7 @@ CREATE TABLE `user` (
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar (255) NOT NULL,
   `email` varchar (255) NOT NULL,
-  `password` varchar (255) NOT NULL,
+  `passwd` varchar (255) NOT NULL,
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
 ALTER TABLE `user` ADD CONSTRAINT UNIQ_8567 UNIQUE(`email`);
