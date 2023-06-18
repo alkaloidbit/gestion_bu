@@ -21,10 +21,15 @@ public class GestionBUAction extends AbstractAction {
         UserDAO userDAO = new UserDAO();
 
         User user = userDAO.login(email, passwd);
+        System.out.println(user.getId());
 
         //TODO handle authentication errors
-        window.getLabel().setText(user.getLast_name());
+        String msg;
+        if (user.getId() != 0)
+            msg = "YWelcome " + user.getFirst_name()+"\n";
+        else
+            msg = "Error during authentication. Please verify your credentials";
 
-
+        window.getLabel().setText(msg);
     }
 }
