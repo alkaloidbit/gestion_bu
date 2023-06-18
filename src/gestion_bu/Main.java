@@ -20,11 +20,15 @@ public class Main {
 
         authorDAO.create(a);
 
-        DAO<User> userDAO = new UserDAO();
+        UserDAO userDAO = new UserDAO();
+
         for (int i = 1; i <= 2; i++)
             System.out.println(userDAO.find(i));
 
-        userDAO.login("fredoudjoudi@gmail.com", "aliboulala");
+        User user = userDAO.login("fredoudjoudi@gmail.com", "aliboulala");
+
+        System.out.println();
+
 
     }
 }

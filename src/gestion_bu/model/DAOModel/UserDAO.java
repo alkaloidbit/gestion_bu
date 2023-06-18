@@ -10,6 +10,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class UserDAO extends DAO<User> {
+
+    public String getMsg() {
+        return "Message";
+    }
+
     @Override
     public User find(int id) {
         User user = new User();
@@ -36,7 +41,6 @@ public class UserDAO extends DAO<User> {
     }
 
     public User login(String email, String passwd) {
-
         User user = new User();
         try {
            ResultSet result = this.connect
@@ -44,10 +48,10 @@ public class UserDAO extends DAO<User> {
                            ResultSet.TYPE_SCROLL_INSENSITIVE,
                            ResultSet.CONCUR_UPDATABLE
                    )
-                   .executeQuery("SELECT * FROM user WHERE email = " + email + " AND passwd = " + passwd + "");
+                   .executeQuery("SELECT * FROM user WHERE email = '" + email + "' AND passwd = '" + passwd + "'");
             if (result.first())
                 user = new User(
-                        result.getInt("id"),
+                        result.getInt("id_user"),
                         result.getInt("is_admin"),
                         result.getString("first_name"),
                         result.getString("last_name"),

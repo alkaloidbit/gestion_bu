@@ -4,8 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GestionBUWindow extends JFrame {
-    private JTextField field1;
-    private JTextField field2;
+    private JTextField emailField;
+    private JPasswordField passwdField;
+    private JLabel label;
+
     public GestionBUWindow() {
         super();
         build();
@@ -22,33 +24,45 @@ public class GestionBUWindow extends JFrame {
 
     private JPanel buildContentPane() {
         JPanel panel = new JPanel();
-        panel.setLayout(new FlowLayout());
+
+        // TODO  a better layout
+        panel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 25));
         panel.setBackground(Color.white);
 
-        field1 = new JTextField();
-        field1.setColumns(10);
+        JLabel emailLabel = new JLabel("Email: ");
 
-        panel.add(field1);
+        emailField = new JTextField();
+        emailField.setColumns(10);
 
-        field2 = new JTextField();
-        field2.setColumns(10);
+        panel.add(emailLabel);
+        panel.add(emailField);
 
-        panel.add(field2);
+        // TODO how to hide text input (password field)
+        JLabel passwdLabel = new JLabel("Password: ");
+        passwdField = new JPasswordField();
+        passwdField.setColumns(10);
 
+        panel.add(passwdLabel);
+        panel.add(passwdField);
 
-        JButton button = new JButton(new GestionBUAction(this, "Calculer"));
+        JButton button = new JButton(new GestionBUAction(this, "Login"));
         panel.add(button);
 
-        JLabel label = new JLabel("Pas encore de contenu");
+        label = new JLabel("");
         panel.add(label);
         return panel;
     }
 
-    public JTextField getField1() {
-        return field1;
+    public JTextField getEmailField() {
+        return emailField;
     }
 
-    public JTextField getField2() {
-        return field2;
+    public JTextField getPasswdField() {
+        return passwdField;
     }
+
+    public JLabel getLabel() {
+        return label;
+    }
+
 }
