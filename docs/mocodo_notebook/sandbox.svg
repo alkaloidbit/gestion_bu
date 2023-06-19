@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="524" height="344" viewBox="0 0 524 344" xmlns="http://www.w3.org/2000/svg">
-<rect id="frame" x="0" y="0" width="524" height="344" fill="#FFF" stroke="none" stroke-width="0"/>
+<svg width="524" height="328" viewBox="0 0 524 328" xmlns="http://www.w3.org/2000/svg">
+<rect id="frame" x="0" y="0" width="524" height="328" fill="#FFF" stroke="none" stroke-width="0"/>
 
 <!-- Association correspond -->
 <g>
-	<line x1="181" y1="155" x2="181" y2="47" stroke="#000" stroke-width="1"/>
+	<line x1="181" y1="147" x2="181" y2="47" stroke="#000" stroke-width="1"/>
 	<text x="186" y="92" fill="#000" font-family="Futura" font-size="11">0,N</text>
 	<line x1="306" y1="47" x2="181" y2="47" stroke="#000" stroke-width="1"/>
 	<text x="250" y="63" fill="#000" font-family="Futura" font-size="11">1,1</text>
@@ -21,8 +21,8 @@
 <g>
 	<line x1="306" y1="47" x2="427" y2="47" stroke="#000" stroke-width="1"/>
 	<text x="344" y="63" fill="#000" font-family="Futura" font-size="11">0,N</text>
-	<line x1="427" y1="263" x2="427" y2="47" stroke="#000" stroke-width="1"/>
-	<text x="432" y="183" fill="#000" font-family="Futura" font-size="11">0,N</text>
+	<line x1="427" y1="247" x2="427" y2="47" stroke="#000" stroke-width="1"/>
+	<text x="432" y="167" fill="#000" font-family="Futura" font-size="11">0,N</text>
 	<g>
 		<path d="M472 10 a14 14 90 0 1 14 14 V38 h-118 V24 a14 14 90 0 1 14 -14" fill="#FFF" stroke="#FFF" stroke-width="0"/>
 		<path d="M486 38 v32 a14 14 90 0 1 -14 14 H382 a14 14 90 0 1 -14 -14 V38 H118" fill="#FFF" stroke="#FFF" stroke-width="0"/>
@@ -36,47 +36,47 @@
 
 <!-- Association belongs -->
 <g>
-	<line x1="181" y1="155" x2="54" y2="155" stroke="#000" stroke-width="1"/>
-	<text x="104" y="171" fill="#000" font-family="Futura" font-size="11">1,N</text>
-	<line x1="54" y1="47" x2="54" y2="155" stroke="#000" stroke-width="1"/>
-	<text x="59" y="101" fill="#000" font-family="Futura" font-size="11">0,N</text>
+	<line x1="181" y1="147" x2="54" y2="147" stroke="#000" stroke-width="1"/>
+	<text x="105" y="163" fill="#000" font-family="Futura" font-size="11">1,1</text>
+	<line x1="54" y1="47" x2="54" y2="147" stroke="#000" stroke-width="1"/>
+	<text x="59" y="101" fill="#000" font-family="Futura" font-size="11">1,N</text>
 	<g>
-		<path d="M85 126 a14 14 90 0 1 14 14 V154 h-90 V140 a14 14 90 0 1 14 -14" fill="#FFF" stroke="#FFF" stroke-width="0"/>
-		<path d="M99 154 v16 a14 14 90 0 1 -14 14 H23 a14 14 90 0 1 -14 -14 V154 H90" fill="#FFF" stroke="#FFF" stroke-width="0"/>
-		<rect x="9" y="126" width="90" height="58" fill="none" rx="14" stroke="#000" stroke-width="1.5"/>
-		<line x1="9" y1="154" x2="99" y2="154" stroke="#000" stroke-width="1.5"/>
-		<text x="16" y="147.3" fill="#000" font-family="Copperplate" font-size="18">belongs</text>
+		<path d="M85 118 a14 14 90 0 1 14 14 V146 h-90 V132 a14 14 90 0 1 14 -14" fill="#FFF" stroke="#FFF" stroke-width="0"/>
+		<path d="M99 146 v16 a14 14 90 0 1 -14 14 H23 a14 14 90 0 1 -14 -14 V146 H90" fill="#FFF" stroke="#FFF" stroke-width="0"/>
+		<rect x="9" y="118" width="90" height="58" fill="none" rx="14" stroke="#000" stroke-width="1.5"/>
+		<line x1="9" y1="146" x2="99" y2="146" stroke="#000" stroke-width="1.5"/>
+		<text x="16" y="139.3" fill="#000" font-family="Copperplate" font-size="18">belongs</text>
 	</g>
 </g>
 
 <!-- Association publish -->
 <g>
-	<line x1="181" y1="155" x2="306" y2="155" stroke="#000" stroke-width="1"/>
-	<text x="239" y="171" fill="#000" font-family="Futura" font-size="11">1,1</text>
-	<line x1="306" y1="263" x2="306" y2="155" stroke="#000" stroke-width="1"/>
-	<text x="311" y="217" fill="#000" font-family="Futura" font-size="11">0,N</text>
+	<line x1="181" y1="147" x2="306" y2="147" stroke="#000" stroke-width="1"/>
+	<text x="239" y="163" fill="#000" font-family="Futura" font-size="11">1,1</text>
+	<line x1="306" y1="247" x2="306" y2="147" stroke="#000" stroke-width="1"/>
+	<text x="311" y="201" fill="#000" font-family="Futura" font-size="11">1,N</text>
 	<g>
-		<path d="M335 126 a14 14 90 0 1 14 14 V154 h-86 V140 a14 14 90 0 1 14 -14" fill="#FFF" stroke="#FFF" stroke-width="0"/>
-		<path d="M349 154 v16 a14 14 90 0 1 -14 14 H277 a14 14 90 0 1 -14 -14 V154 H86" fill="#FFF" stroke="#FFF" stroke-width="0"/>
-		<rect x="263" y="126" width="86" height="58" fill="none" rx="14" stroke="#000" stroke-width="1.5"/>
-		<line x1="263" y1="154" x2="349" y2="154" stroke="#000" stroke-width="1.5"/>
-		<text x="270" y="147.3" fill="#000" font-family="Copperplate" font-size="18">publish</text>
-		<text x="270" y="172.1" fill="#000" font-family="Gill Sans" font-size="15">year</text>
+		<path d="M335 118 a14 14 90 0 1 14 14 V146 h-86 V132 a14 14 90 0 1 14 -14" fill="#FFF" stroke="#FFF" stroke-width="0"/>
+		<path d="M349 146 v16 a14 14 90 0 1 -14 14 H277 a14 14 90 0 1 -14 -14 V146 H86" fill="#FFF" stroke="#FFF" stroke-width="0"/>
+		<rect x="263" y="118" width="86" height="58" fill="none" rx="14" stroke="#000" stroke-width="1.5"/>
+		<line x1="263" y1="146" x2="349" y2="146" stroke="#000" stroke-width="1.5"/>
+		<text x="270" y="139.3" fill="#000" font-family="Copperplate" font-size="18">publish</text>
+		<text x="270" y="164.1" fill="#000" font-family="Gill Sans" font-size="15">year</text>
 	</g>
 </g>
 
 <!-- Association compose -->
 <g>
-	<line x1="54" y1="263" x2="181" y2="263" stroke="#000" stroke-width="1"/>
-	<text x="100" y="279" fill="#000" font-family="Futura" font-size="11">0,N</text>
-	<line x1="181" y1="155" x2="181" y2="263" stroke="#000" stroke-width="1"/>
-	<text x="186" y="226" fill="#000" font-family="Futura" font-size="11">1,N</text>
+	<line x1="54" y1="247" x2="181" y2="247" stroke="#000" stroke-width="1"/>
+	<text x="100" y="263" fill="#000" font-family="Futura" font-size="11">0,N</text>
+	<line x1="181" y1="147" x2="181" y2="247" stroke="#000" stroke-width="1"/>
+	<text x="186" y="210" fill="#000" font-family="Futura" font-size="11">1,N</text>
 	<g>
-		<path d="M212 234 a14 14 90 0 1 14 14 V262 h-90 V248 a14 14 90 0 1 14 -14" fill="#FFF" stroke="#FFF" stroke-width="0"/>
-		<path d="M226 262 v16 a14 14 90 0 1 -14 14 H150 a14 14 90 0 1 -14 -14 V262 H90" fill="#FFF" stroke="#FFF" stroke-width="0"/>
-		<rect x="136" y="234" width="90" height="58" fill="none" rx="14" stroke="#000" stroke-width="1.5"/>
-		<line x1="136" y1="262" x2="226" y2="262" stroke="#000" stroke-width="1.5"/>
-		<text x="143" y="255.3" fill="#000" font-family="Copperplate" font-size="18">compose</text>
+		<path d="M212 218 a14 14 90 0 1 14 14 V246 h-90 V232 a14 14 90 0 1 14 -14" fill="#FFF" stroke="#FFF" stroke-width="0"/>
+		<path d="M226 246 v16 a14 14 90 0 1 -14 14 H150 a14 14 90 0 1 -14 -14 V246 H90" fill="#FFF" stroke="#FFF" stroke-width="0"/>
+		<rect x="136" y="218" width="90" height="58" fill="none" rx="14" stroke="#000" stroke-width="1.5"/>
+		<line x1="136" y1="246" x2="226" y2="246" stroke="#000" stroke-width="1.5"/>
+		<text x="143" y="239.3" fill="#000" font-family="Copperplate" font-size="18">compose</text>
 	</g>
 </g>
 
@@ -111,61 +111,61 @@
 <g>
 	<g>
 		<rect x="128" y="100" width="106" height="30" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
-		<rect x="128" y="130" width="106" height="80" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
-		<rect x="128" y="100" width="106" height="110" fill="none" stroke="#000" stroke-width="1.5" opacity="1"/>
+		<rect x="128" y="130" width="106" height="64" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
+		<rect x="128" y="100" width="106" height="94" fill="none" stroke="#000" stroke-width="1.5" opacity="1"/>
 		<line x1="128" y1="130" x2="234" y2="130" stroke="#000" stroke-width="1.5"/>
 	</g>
 	<text x="137" y="121.3" fill="#000" font-family="Copperplate" font-size="18">document</text>
 	<text x="136" y="147.1" fill="#000" font-family="Gill Sans" font-size="15">id_document</text>
 	<line x1="136" y1="150" x2="219" y2="150" stroke="#000" stroke-width="1"/>
 	<text x="136" y="164.1" fill="#000" font-family="Gill Sans" font-size="15">title</text>
-	<text x="136" y="181.1" fill="#000" font-family="Gill Sans" font-size="15">pages_nbr</text>
+	<text x="136" y="181" fill="#000" font-family="Gill Sans" font-size="15">pages_nbr</text>
 </g>
 
 <!-- Entity author -->
 <g>
 	<g>
-		<rect x="13" y="216" width="82" height="30" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
-		<rect x="13" y="246" width="82" height="64" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
-		<rect x="13" y="216" width="82" height="94" fill="none" stroke="#000" stroke-width="1.5" opacity="1"/>
-		<line x1="13" y1="246" x2="95" y2="246" stroke="#000" stroke-width="1.5"/>
+		<rect x="13" y="200" width="82" height="30" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
+		<rect x="13" y="230" width="82" height="64" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
+		<rect x="13" y="200" width="82" height="94" fill="none" stroke="#000" stroke-width="1.5" opacity="1"/>
+		<line x1="13" y1="230" x2="95" y2="230" stroke="#000" stroke-width="1.5"/>
 	</g>
-	<text x="21" y="237.3" fill="#000" font-family="Copperplate" font-size="18">author</text>
-	<text x="21" y="263.1" fill="#000" font-family="Gill Sans" font-size="15">id_author</text>
-	<line x1="21" y1="266" x2="83" y2="266" stroke="#000" stroke-width="1"/>
-	<text x="21" y="280.1" fill="#000" font-family="Gill Sans" font-size="15">name</text>
-	<text x="21" y="297" fill="#000" font-family="Gill Sans" font-size="15">surname</text>
+	<text x="21" y="221.3" fill="#000" font-family="Copperplate" font-size="18">author</text>
+	<text x="21" y="247.1" fill="#000" font-family="Gill Sans" font-size="15">id_author</text>
+	<line x1="21" y1="250" x2="83" y2="250" stroke="#000" stroke-width="1"/>
+	<text x="21" y="264.1" fill="#000" font-family="Gill Sans" font-size="15">name</text>
+	<text x="21" y="281" fill="#000" font-family="Gill Sans" font-size="15">surname</text>
 </g>
 
 <!-- Entity edition -->
 <g>
 	<g>
-		<rect x="265" y="225" width="82" height="30" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
-		<rect x="265" y="255" width="82" height="46" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
-		<rect x="265" y="225" width="82" height="76" fill="none" stroke="#000" stroke-width="1.5" opacity="1"/>
-		<line x1="265" y1="255" x2="347" y2="255" stroke="#000" stroke-width="1.5"/>
+		<rect x="265" y="209" width="82" height="30" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
+		<rect x="265" y="239" width="82" height="46" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
+		<rect x="265" y="209" width="82" height="76" fill="none" stroke="#000" stroke-width="1.5" opacity="1"/>
+		<line x1="265" y1="239" x2="347" y2="239" stroke="#000" stroke-width="1.5"/>
 	</g>
-	<text x="273" y="246.3" fill="#000" font-family="Copperplate" font-size="18">edition</text>
-	<text x="273" y="272.1" fill="#000" font-family="Gill Sans" font-size="15">id_edition</text>
-	<line x1="273" y1="275" x2="337" y2="275" stroke="#000" stroke-width="1"/>
-	<text x="273" y="289.1" fill="#000" font-family="Gill Sans" font-size="15">name</text>
+	<text x="273" y="230.3" fill="#000" font-family="Copperplate" font-size="18">edition</text>
+	<text x="273" y="256.1" fill="#000" font-family="Gill Sans" font-size="15">id_edition</text>
+	<line x1="273" y1="259" x2="337" y2="259" stroke="#000" stroke-width="1"/>
+	<text x="273" y="273.1" fill="#000" font-family="Gill Sans" font-size="15">name</text>
 </g>
 
 <!-- Entity user -->
 <g>
 	<g>
-		<rect x="389" y="191" width="76" height="30" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
-		<rect x="389" y="221" width="76" height="114" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
-		<rect x="389" y="191" width="76" height="144" fill="none" stroke="#000" stroke-width="1.5" opacity="1"/>
-		<line x1="389" y1="221" x2="465" y2="221" stroke="#000" stroke-width="1.5"/>
+		<rect x="389" y="175" width="76" height="30" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
+		<rect x="389" y="205" width="76" height="114" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
+		<rect x="389" y="175" width="76" height="144" fill="none" stroke="#000" stroke-width="1.5" opacity="1"/>
+		<line x1="389" y1="205" x2="465" y2="205" stroke="#000" stroke-width="1.5"/>
 	</g>
-	<text x="405" y="212.3" fill="#000" font-family="Copperplate" font-size="18">user</text>
-	<text x="397" y="238.1" fill="#000" font-family="Gill Sans" font-size="15">id_user</text>
-	<line x1="397" y1="241" x2="445" y2="241" stroke="#000" stroke-width="1"/>
-	<text x="397" y="255.1" fill="#000" font-family="Gill Sans" font-size="15">is_admin</text>
-	<text x="397" y="272.1" fill="#000" font-family="Gill Sans" font-size="15">name</text>
-	<text x="397" y="289.1" fill="#000" font-family="Gill Sans" font-size="15">surname</text>
-	<text x="397" y="306" fill="#000" font-family="Gill Sans" font-size="15">email</text>
-	<text x="397" y="323" fill="#000" font-family="Gill Sans" font-size="15">password</text>
+	<text x="405" y="196.3" fill="#000" font-family="Copperplate" font-size="18">user</text>
+	<text x="397" y="222.1" fill="#000" font-family="Gill Sans" font-size="15">id_user</text>
+	<line x1="397" y1="225" x2="445" y2="225" stroke="#000" stroke-width="1"/>
+	<text x="397" y="239.1" fill="#000" font-family="Gill Sans" font-size="15">is_admin</text>
+	<text x="397" y="256.1" fill="#000" font-family="Gill Sans" font-size="15">name</text>
+	<text x="397" y="273.1" fill="#000" font-family="Gill Sans" font-size="15">surname</text>
+	<text x="397" y="290" fill="#000" font-family="Gill Sans" font-size="15">email</text>
+	<text x="397" y="307" fill="#000" font-family="Gill Sans" font-size="15">password</text>
 </g>
 </svg>

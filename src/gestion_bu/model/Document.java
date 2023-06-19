@@ -5,7 +5,11 @@ public class Document {
 
     private String title;
 
-    public Document(int id, String title, int pages_nbr, String year) {
+    private int pages_nbr;
+
+    private String year;
+
+    public Document(int id, String title, int id_edition, int pages_nbr, String year) {
         this.id = id;
         this.title = title;
         this.pages_nbr = pages_nbr;
@@ -43,8 +47,4 @@ public class Document {
     public void setYear(String year) {
         this.year = year;
     }
-
-    private int pages_nbr;
-
-    private String year;
 }

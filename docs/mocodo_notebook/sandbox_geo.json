@@ -1,6 +1,6 @@
 {
   "width": 524,
-  "height": 344,
+  "height": 328,
   "cx": [
     [ "genre", 54 ],
     [ "correspond", 181 ],
@@ -19,13 +19,13 @@
     [ "correspond", 47 ],
     [ "copy", 47 ],
     [ "borrow", 47 ],
-    [ "belongs", 155 ],
-    [ "document", 155 ],
-    [ "publish", 155 ],
-    [ "author", 263 ],
-    [ "compose", 263 ],
-    [ "edition", 263 ],
-    [ "user", 263 ]
+    [ "belongs", 147 ],
+    [ "document", 147 ],
+    [ "publish", 147 ],
+    [ "author", 247 ],
+    [ "compose", 247 ],
+    [ "edition", 247 ],
+    [ "user", 247 ]
   ],
   "shift": [
     [ "correspond,document,0", 0 ],

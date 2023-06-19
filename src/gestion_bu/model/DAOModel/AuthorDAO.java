@@ -10,7 +10,6 @@ import java.sql.Statement;
 
 public class AuthorDAO extends DAO<Author> {
 
-
     @Override
     public Author find(int id) {
         Author author = new Author();

@@ -3,9 +3,9 @@ correspond, 0N document, 11 copy
 copy: id_copy [int(11)]
 borrow, 0N copy, 0N user: borrowing_start [date], borrowing_end [date]
 
-belongs, 1N document, 0N genre
-document: id_document [int(11)], title [varchar(50)], pages_nbr [smallint], 
-publish, 11 document, 0N edition: year [date]
+belongs, 11 document, 1N genre
+document: id_document [int(11)], title [varchar(50)], pages_nbr [smallint]
+publish, 11 document, 1N edition: year [date]
 :
 :
 

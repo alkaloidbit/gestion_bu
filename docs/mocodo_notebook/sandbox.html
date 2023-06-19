@@ -18,12 +18,6 @@
   )
 </div>
 <div>
-  <span class='relation'>belongs</span> (
-    <span class='foreign primary'>#id_document</span>,
-    <span class='foreign primary'>#id_genre</span>
-  )
-</div>
-<div>
   <span class='relation'>borrow</span> (
     <span class='foreign primary'>#id_copy</span>,
     <span class='foreign primary'>#id_user</span>,
@@ -48,7 +42,7 @@
     <span class='primary'>id_document</span>,
     <span class='normal'>title</span>,
     <span class='normal'>pages_nbr</span>,
-    <span class='normal'></span>,
+    <span class='foreign'>#id_genre</span>,
     <span class='foreign'>#id_edition</span>,
     <span class='normal'>year</span>
   )
