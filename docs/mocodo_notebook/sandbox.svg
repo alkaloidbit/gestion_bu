@@ -68,7 +68,7 @@
 <!-- Association compose -->
 <g>
 	<line x1="54" y1="247" x2="181" y2="247" stroke="#000" stroke-width="1"/>
-	<text x="100" y="263" fill="#000" font-family="Futura" font-size="11">0,N</text>
+	<text x="101" y="263" fill="#000" font-family="Futura" font-size="11">0,N</text>
 	<line x1="181" y1="147" x2="181" y2="247" stroke="#000" stroke-width="1"/>
 	<text x="186" y="210" fill="#000" font-family="Futura" font-size="11">1,N</text>
 	<g>
@@ -125,16 +125,16 @@
 <!-- Entity author -->
 <g>
 	<g>
-		<rect x="13" y="200" width="82" height="30" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
-		<rect x="13" y="230" width="82" height="64" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
-		<rect x="13" y="200" width="82" height="94" fill="none" stroke="#000" stroke-width="1.5" opacity="1"/>
-		<line x1="13" y1="230" x2="95" y2="230" stroke="#000" stroke-width="1.5"/>
+		<rect x="12" y="200" width="84" height="30" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
+		<rect x="12" y="230" width="84" height="64" fill="#FFF" stroke="#FFF" stroke-width="0" opacity="1"/>
+		<rect x="12" y="200" width="84" height="94" fill="none" stroke="#000" stroke-width="1.5" opacity="1"/>
+		<line x1="12" y1="230" x2="96" y2="230" stroke="#000" stroke-width="1.5"/>
 	</g>
 	<text x="21" y="221.3" fill="#000" font-family="Copperplate" font-size="18">author</text>
-	<text x="21" y="247.1" fill="#000" font-family="Gill Sans" font-size="15">id_author</text>
-	<line x1="21" y1="250" x2="83" y2="250" stroke="#000" stroke-width="1"/>
-	<text x="21" y="264.1" fill="#000" font-family="Gill Sans" font-size="15">name</text>
-	<text x="21" y="281" fill="#000" font-family="Gill Sans" font-size="15">surname</text>
+	<text x="20" y="247.1" fill="#000" font-family="Gill Sans" font-size="15">id_author</text>
+	<line x1="20" y1="250" x2="82" y2="250" stroke="#000" stroke-width="1"/>
+	<text x="20" y="264.1" fill="#000" font-family="Gill Sans" font-size="15">first_name</text>
+	<text x="20" y="281" fill="#000" font-family="Gill Sans" font-size="15">last_name</text>
 </g>
 
 <!-- Entity edition -->

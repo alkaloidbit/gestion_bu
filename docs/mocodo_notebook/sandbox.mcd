@@ -9,7 +9,7 @@ publish, 11 document, 1N edition: year [date]
 :
 :
 
-author: id_author [int(11)], name [varchar(50)], surname [varchar(50)]
+author: id_author [int(11)], first_name [varchar(50)], last_name [varchar(50)]
 compose, 0N author, 1N document
 edition: id_edition [int(11)], name [varchar(50)]
 user: id_user [int(11)], is_admin [boolean], name [varchar(255)], surname [varchar (255)], email [varchar (255)], password [varchar (255)]

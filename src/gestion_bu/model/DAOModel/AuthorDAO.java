@@ -21,7 +21,7 @@ public class AuthorDAO extends DAO<Author> {
                                     )
                     .executeQuery("SELECT * FROM author WHERE id_author = " + id);
 
-            if(result.first())
+            while(result.next())
                 author = new Author(
                         id,
                         result.getString("first_name"),
@@ -30,7 +30,7 @@ public class AuthorDAO extends DAO<Author> {
         }catch (SQLException e) {
            e.printStackTrace();
         }
-        return author;
+        return author                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
     }
 
     @Override
