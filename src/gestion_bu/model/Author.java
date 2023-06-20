@@ -40,7 +40,8 @@ public class Author {
     }
 
     public String toString(){
-        String str =     "NOM : " + this.getLast_name() + "\n";
+        String str =        "Id_Author :" + this.getId() + "\n";
+        str +=              "NOM : " + this.getLast_name() + "\n";
         str +=             "PRENOM : " + this.getFirst_name() + "\n";
         str +=            "\n.....................................\n";
 

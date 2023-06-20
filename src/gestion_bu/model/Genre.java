@@ -31,7 +31,7 @@ public class Genre {
     }
 
     public String toString() {
-        String str = "Id_Edition :" + this.getId() + "\n";
+        String str = "Id_Genre :" + this.getId() + "\n";
         str += "Name: " + this.getName() + "\n";
 
         return str;

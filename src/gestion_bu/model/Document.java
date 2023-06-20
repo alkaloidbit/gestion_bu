@@ -74,11 +74,11 @@ public class Document {
         str +=             "Title : " + this.getTitle() + "\n";
         str +=             "pages_nbr : " + this.getPages_nbr() + "\n";
         str +=             "year " + this.getYear() + "\n";
-
-        str += "Authors: ";
+        str +=             "Authors: ";
         ArrayList<Author> al = this.getAuthors();
             for (int i = 0; i < al.size(); i++) {
-                System.out.println(al.get(i));
+                Author auth = al.get(i);
+                str += auth.getLast_name() + " " + auth.getFirst_name() + "\n";
             }
 
 

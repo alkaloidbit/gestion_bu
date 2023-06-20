@@ -1,11 +1,14 @@
 package gestion_bu;
 
 import gestion_bu.model.Author;
-import gestion_bu.model.DAOModel.DocumentDAO;
 import gestion_bu.model.Document;
 import gestion_bu.model.User;
 import gestion_bu.model.DAO;
+import gestion_bu.model.DAOModel.DocumentDAO;
+import gestion_bu.model.DAOModel.GenreDAO;
 import gestion_bu.model.DAOModel.AuthorDAO;
+import gestion_bu.model.DAOModel.EditionDAO;
+
 import gestion_bu.model.DAOModel.UserDAO;
 
 import java.sql.*;
@@ -28,8 +31,13 @@ public class Main {
 //        User user = userDAO.login("fredoudjoudi@gmail.com", "foo");
 
         DocumentDAO docDAO = new DocumentDAO();
-        System.out.println(docDAO.find(3));
+        System.out.println(docDAO.find(2));
 
+        GenreDAO genreDAO = new GenreDAO();
+        System.out.println(genreDAO.find(1));
 //        System.out.println(user);
+
+        EditionDAO editionDAO = new EditionDAO();
+        System.out.println(editionDAO.find(1));
     }
 }
