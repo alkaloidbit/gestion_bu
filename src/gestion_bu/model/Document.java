@@ -12,18 +12,18 @@ public class Document {
 
     private ArrayList<Author> authors;
 
-    private int id_edition = 0;
+    private Edition edition;
 
-    private int id_genre = 0;
+    private Genre genre;
 
     private String year;
 
     public Document() {}
-    public Document(int id, String title, int id_edition, int id_genre, int pages_nbr, String year, ArrayList<Author> authors) {
+    public Document(int id, String title, Edition edition, Genre genre, int pages_nbr, String year, ArrayList<Author> authors) {
         this.id = id;
         this.title = title;
-        this.id_edition = id_edition;
-        this.id_genre = id_genre;
+        this.edition = edition;
+        this.genre = genre;
         this.pages_nbr = pages_nbr;
         this.year = year;
         this.authors = authors;
@@ -69,11 +69,29 @@ public class Document {
         this.year = year;
     }
 
+    public Edition getEdition() {
+        return edition;
+    }
+
+    public void setEdition(Edition edition) {
+        this.edition = edition;
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
+
     public String toString() {
         String str =       "Id_Document :" + this.getId() + "\n";
         str +=             "Title : " + this.getTitle() + "\n";
         str +=             "pages_nbr : " + this.getPages_nbr() + "\n";
         str +=             "year " + this.getYear() + "\n";
+        str +=              "Edition " + this.getEdition() + "\n";
+        str +=              "Genre " + this.getGenre() + "\n";
         str +=             "Authors: ";
         ArrayList<Author> al = this.getAuthors();
             for (int i = 0; i < al.size(); i++) {

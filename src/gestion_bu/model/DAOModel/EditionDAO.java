@@ -17,7 +17,7 @@ public class EditionDAO extends DAO<Edition> {
                             ResultSet.TYPE_SCROLL_INSENSITIVE,
                             ResultSet.CONCUR_UPDATABLE
                     )
-                    .executeQuery("Select e.* from edition e");
+                    .executeQuery("Select e.* from edition e where e.id_edition = " + id);
             if( result.first())
                 edition =new Edition(
                         id,

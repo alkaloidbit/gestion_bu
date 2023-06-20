@@ -12,6 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DocumentDAO extends DAO<Document> {
+
+    private EditionDAO editionDAO;
+
+    private GenreDAO genreDAO;
+
     @Override
     public Document find(int id) {
         Document document = new Document();
@@ -46,12 +51,16 @@ public class DocumentDAO extends DAO<Document> {
                     );
                al.add(author);
             }
+
+            editionDAO = new EditionDAO();
+            genreDAO = new GenreDAO();
+
             if(result.first())
                 document = new Document(
                         id,
                         result.getString("title"),
-                        result.getInt("id_edition"),
-                        result.getInt("id_genre"),
+                        editionDAO.find(result.getInt("id_edition")),
+                        genreDAO.find(result.getInt("id_genre")),
                         result.getInt("pages_nbr"),
                         result.getString("year"),
                         al

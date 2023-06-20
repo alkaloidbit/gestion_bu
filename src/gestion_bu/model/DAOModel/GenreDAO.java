@@ -18,7 +18,7 @@ public class GenreDAO extends DAO<Genre> {
                             ResultSet.TYPE_SCROLL_INSENSITIVE,
                             ResultSet.CONCUR_UPDATABLE
                     )
-                    .executeQuery("Select g.* from genre g");
+                    .executeQuery("Select g.* from genre g where g.id_genre = "+id);
             if(result.first())
                 genre = new Genre(
                         id,
