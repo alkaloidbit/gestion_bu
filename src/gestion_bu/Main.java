@@ -15,29 +15,28 @@ import java.sql.*;
 
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-//        DAO<Author> authorDAO = new AuthorDAO();
-//        for (int i = 1; i <= 2; i++)
-//            System.out.println(authorDAO.find(i));
-//
-//        a.setLast_name("Badlieutenant");
-//
-//        authorDAO.create(a);
-//
-//        UserDAO userDAO = new UserDAO();
-//
-//        for (int i = 1; i <= 2; i++)
-//            System.out.println(userDAO.find(i));
-
-//        User user = userDAO.login("fredoudjoudi@gmail.com", "foo");
-
         DocumentDAO docDAO = new DocumentDAO();
-        System.out.println(docDAO.find(2));
+        System.out.println(docDAO.find(4));
 
         GenreDAO genreDAO = new GenreDAO();
         System.out.println(genreDAO.find(1));
-//        System.out.println(user);
 
         EditionDAO editionDAO = new EditionDAO();
         System.out.println(editionDAO.find(1));
+
+        AuthorDAO authorDAO = new AuthorDAO();
+        Author a = authorDAO.find(3);
+        System.out.println(a);
+        a.setLast_name("Salut");
+        a = authorDAO.update(a);
+        System.out.println(a);
+        authorDAO.delete(a);
+        System.out.println(a);
+
+        a = new Author();
+        a.setFirst_name("John");
+        a.setLast_name("Rambo");
+        a = authorDAO.create(a);
+        System.out.println(a);
     }
 }

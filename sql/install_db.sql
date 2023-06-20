@@ -63,8 +63,8 @@ CREATE TABLE `user` (
 ALTER TABLE `user` ADD CONSTRAINT UNIQ_8567 UNIQUE(`email`);
 ALTER TABLE `document` ADD FOREIGN KEY (`id_edition`) REFERENCES `edition` (`id_edition`);
 ALTER TABLE `document` ADD FOREIGN KEY (`id_genre`) REFERENCES `genre` (`id_genre`);
-ALTER TABLE `compose` adD FOREIGN KEY (`id_document`) REFERENCES `document` (`id_document`);
-ALTER TABLE `compose` adD FOREIGN KEY (`id_author`) REFERENCES `author` (`id_author`);
+ALTER TABLE `compose` adD FOREIGN KEY (`id_document`) REFERENCES `document` (`id_document`) ON DELETE CASCADE;
+ALTER TABLE `compose` adD FOREIGN KEY (`id_author`) REFERENCES `author` (`id_author`) ON DELETE CASCADE;
 ALTER TABLE `borrow` ADD FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 ALTER TABLE `borrow` ADD FOREIGN KEY (`id_copy`) REFERENCES `copy` (`id_copy`);
 ALTER TABLE `copy` ADD FOREIGN KEY (`id_document`) REFERENCES `document` (`id_document`);

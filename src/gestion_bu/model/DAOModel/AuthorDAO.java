@@ -58,11 +58,35 @@ public class AuthorDAO extends DAO<Author> {
 
     @Override
     public Author update(Author obj) {
-        return null;
+        try {
+            this.connect
+                    .createStatement(
+                            ResultSet.TYPE_SCROLL_INSENSITIVE,
+                            ResultSet.CONCUR_UPDATABLE
+                    ).executeUpdate(
+                            "UPDATE author SET first_name = '"+ obj.getFirst_name() +"', " +
+                                              " last_name = '" + obj.getLast_name() + "' "+
+                                                " Where id_author = " + obj.getId() + ""
+                    );
+            obj = this.find(obj.getId());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return obj;
     }
 
     @Override
     public void delete(Author obj) {
-
+        try {
+            this.connect
+                .createStatement(
+                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_UPDATABLE
+                ).executeUpdate(
+                    "DELETE FROM author WHERE id_author = " + obj.getId()
+                );
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -31,4 +31,6 @@ INSERT INTO `document` (`id_document`, `title`, `pages_nbr`, `id_edition`, `id_g
 INSERT INTO `author` (`id_author`, `first_name`, `last_name`) VALUES (NULL, 'Mark', 'Pilgrim');
 INSERT INTO `compose` (`id_author`, `id_document`) VALUES (3, 4);
 
+-- A second author for document 4
+INSERT INTO `compose` (`id_author`, `id_document`) VALUES (2, 4);
 
