@@ -3,8 +3,10 @@ package gestion_bu.model.DAOModel;
 import gestion_bu.model.DAO;
 import gestion_bu.model.Genre;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class GenreDAO extends DAO<Genre> {
 
@@ -33,16 +35,56 @@ public class GenreDAO extends DAO<Genre> {
 
     @Override
     public Genre create(Genre obj) {
-        return null;
+        try {
+            PreparedStatement prepare = this.connect
+                    .prepareStatement(
+                        "INSERT INTO genre (name) VALUES (?)",
+                        Statement.RETURN_GENERATED_KEYS
+                    );
+            prepare.setString(1, obj.getName());
+            prepare.executeUpdate();
+            ResultSet rs = prepare.getGeneratedKeys();
+            if (rs != null && rs.next()) {
+                int key = rs.getInt(1);
+                obj = this.find(key);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return obj;
     }
 
     @Override
     public Genre update(Genre obj) {
-        return null;
+        try {
+            this.connect
+                    .createStatement(
+                            ResultSet.TYPE_SCROLL_INSENSITIVE,
+                            ResultSet.CONCUR_UPDATABLE
+                    ).executeUpdate(
+                            "UPDATE genre SET name = '"+ obj.getName() +"' "+
+                                                " Where id_genre = " + obj.getId() + ""
+                    );
+            obj = this.find(obj.getId());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return obj;
     }
 
     @Override
     public void delete(Genre obj) {
+        try {
+            this.connect
+                .createStatement(
+                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_UPDATABLE
+                ).executeUpdate(
+                    "DELETE FROM genre WHERE id_genre = " + obj.getId()
+                );
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 }
