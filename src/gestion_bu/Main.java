@@ -17,20 +17,11 @@ import java.sql.*;
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
-
 //        DocumentDAO docDAO = new DocumentDAO();
 //        System.out.println(docDAO.find(1));
 
-        GenreDAO genreDAO = new GenreDAO();
-        Genre genre = genreDAO.find(1);
-
-        genre.setName("For dummies and more");
-        genreDAO.update(genre);
-
-
-        genreDAO.delete(genre);
-        System.out.println(genre);
-
+        testGenreDAO tg = new testGenreDAO();
+        tg.testCrud();
 //
 //        EditionDAO editionDAO = new EditionDAO();
 //        System.out.println(editionDAO.find(1));
