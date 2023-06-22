@@ -32,16 +32,57 @@ public class EditionDAO extends DAO<Edition> {
 
     @Override
     public Edition create(Edition obj) {
-        return null;
+        try {
+            PreparedStatement prepare = this.connect
+                    .prepareStatement(
+                        "INSERT INTO edition (name) VALUES (?)",
+                        Statement.RETURN_GENERATED_KEYS
+                    );
+            prepare.setString(1, obj.getName());
+            prepare.executeUpdate();
+            ResultSet rs = prepare.getGeneratedKeys();
+            if (rs != null && rs.next()) {
+                int key = rs.getInt(1);
+                obj = this.find(key);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return obj;
     }
 
     @Override
     public Edition update(Edition obj) {
-        return null;
+        try {
+            this.connect
+                    .createStatement(
+                            ResultSet.TYPE_SCROLL_INSENSITIVE,
+                            ResultSet.CONCUR_UPDATABLE
+                    ).executeUpdate(
+                            "UPDATE edition SET name = '"+ obj.getName() +"' "+
+                                                " Where id_edition = " + obj.getId() + ""
+                    );
+            obj = this.find(obj.getId());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return obj;
     }
 
     @Override
     public void delete(Edition obj) {
+        try {
+            this.connect
+                .createStatement(
+                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_UPDATABLE
+                ).executeUpdate(
+                    "DELETE FROM edition WHERE id_edition = " + obj.getId()
+                );
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
 
     }
 }

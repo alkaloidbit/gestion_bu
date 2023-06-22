@@ -8,6 +8,7 @@ public class testGenreDAO {
         // Genre find
         GenreDAO genreDAO = new GenreDAO();
         Genre genre = genreDAO.find(1);
+        System.out.println(genre);
         // Genre update
         genre.setName("For dummies and more");
         genreDAO.update(genre);

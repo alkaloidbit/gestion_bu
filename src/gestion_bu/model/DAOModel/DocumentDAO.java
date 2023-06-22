@@ -24,38 +24,36 @@ public class DocumentDAO extends DAO<Document> {
             ResultSet result = this.connect
                     .createStatement(
                             ResultSet.TYPE_SCROLL_INSENSITIVE,
-                            ResultSet.CONCUR_UPDATABLE
-                    )
+                            ResultSet.CONCUR_UPDATABLE)
                     .executeQuery("SELECT d.*, e.name as edition, g.name as genre FROM document d" +
-                                        " LEFT JOIN edition e " +
-                                            " ON e.id_edition = d.id_edition " +
-                                        " LEFT JOIN genre g " +
-                                            " ON g.id_genre = d.id_genre " +
-                                        "  WHERE d.id_document = " + id);
+                            " LEFT JOIN edition e " +
+                            " ON e.id_edition = d.id_edition " +
+                            " LEFT JOIN genre g " +
+                            " ON g.id_genre = d.id_genre " +
+                            "  WHERE d.id_document = " + id);
             ResultSet authorslist = this.connect
                     .createStatement(
                             ResultSet.TYPE_SCROLL_INSENSITIVE,
-                            ResultSet.CONCUR_UPDATABLE
-                    ).executeQuery("SELECT  a.* " +
-                                            "FROM author a INNER JOIN compose c" +
-                                            " on c.id_author  = a.id_author " +
-                                            " LEFT JOIN document d on d.id_document = c.id_document " +
+                            ResultSet.CONCUR_UPDATABLE)
+                    .executeQuery("SELECT  a.* " +
+                            "FROM author a INNER JOIN compose c" +
+                            " on c.id_author  = a.id_author " +
+                            " LEFT JOIN document d on d.id_document = c.id_document " +
                             "WHERE d.id_document = " + id);
 
             ArrayList<Author> al = new ArrayList<Author>();
-            while(authorslist.next()) {
+            while (authorslist.next()) {
                 Author author = new Author(
                         authorslist.getInt("id_author"),
                         authorslist.getString("first_name"),
-                        authorslist.getString("last_name")
-                    );
-               al.add(author);
+                        authorslist.getString("last_name"));
+                al.add(author);
             }
 
             editionDAO = new EditionDAO();
             genreDAO = new GenreDAO();
 
-            if(result.first())
+            if (result.first())
                 document = new Document(
                         id,
                         result.getString("title"),
@@ -63,17 +61,25 @@ public class DocumentDAO extends DAO<Document> {
                         genreDAO.find(result.getInt("id_genre")),
                         result.getInt("pages_nbr"),
                         result.getString("year"),
-                        al
-                );
+                        al);
         } catch (SQLException e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
         return document;
     }
 
     @Override
     public Document create(Document obj) {
-        return null;
+        try {
+            if (obj.getGenre().getId() == 0) {
+                GenreDAO genreDAO = new GenreDAO();
+                obj.setGenre(genreDAO.create(obj.getGenre()));
+            }
+            if (obj.getEdition().getId() == 0) {
+                EditionDAO editionDAO = new EditionDAO();
+                obj.setEdition(editionDAO.create(obj.getGenre()));
+            }
+        }
     }
 
     @Override

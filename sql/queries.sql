@@ -10,12 +10,11 @@ on e.id_edition = d.id_edition;
 
 -- Info on documents + edition + genre
 select d.title, d.pages_nbr, d.year, e.name as edition, g.name as genre
-from document d inner join edition e
+from document d 
+inner join edition e
 on e.id_edition = d.id_edition
-inner join belongs b
-on b.id_document = d.id_document
 inner join genre g
-on g.id_genre = b.id_genre
+on g.id_genre = d.id_genre
 
 
 -- Complete info about a document
@@ -35,17 +34,13 @@ ON
 LEFT JOIN author a
 ON
 	a.id_author = c.id_author
-LEFT JOIN belongs b
-ON
-	b.id_document = d.id_document
 LEFT JOIN genre g
 ON
-	g.id_genre = b.id_genre
+	g.id_genre = d.id_genre
 
 -- Get author + documents he published
 SELECT
-	a.first_name,
-	a.last_name,
+	CONCAT(a.first_name," ", a.last_name),
 	d.title,
 	d.pages_nbr,
 	d.year,
@@ -61,10 +56,8 @@ ON
 	d.id_document = c.id_document
 LEFT JOIN edition e
 on e.id_edition = d.id_edition
-left join belongs b
-on b.id_document = d.id_document
 left join genre g
-on g.id_genre = b.id_genre
+on g.id_genre = d.id_genre
 
 
 -- Query to search on document title field
