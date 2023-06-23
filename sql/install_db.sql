@@ -13,7 +13,7 @@ CREATE TABLE `document` (
   `id_document` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `pages_nbr` smallint NOT NULL,
-  `id_edition` int(11) NOT NULL,
+  `id_edition` int(11) DEFAULT NULL,
   `id_genre` int(11) DEFAULT NULL,
   `year` varchar(4) NOT NULL,
   PRIMARY KEY (`id_document`)

@@ -30,7 +30,7 @@ public class Edition {
 
     public String toString() {
         String str =  "Id_Edition :" + this.getId() + "\n";
-        str += "name: " + this.getName()+ "\n";
+        str += "name: " + this.getName();
 
         return str;
     }

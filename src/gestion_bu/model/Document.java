@@ -98,8 +98,6 @@ public class Document {
                 Author auth = al.get(i);
                 str += auth.getLast_name() + " " + auth.getFirst_name() + "\n";
             }
-
-
         str +=            "\n.....................................\n";
 
         return str;

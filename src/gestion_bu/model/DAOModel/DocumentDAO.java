@@ -6,8 +6,10 @@ import gestion_bu.model.Document;
 
 import javax.xml.transform.Result;
 import java.sql.Array;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,20 +77,78 @@ public class DocumentDAO extends DAO<Document> {
                 GenreDAO genreDAO = new GenreDAO();
                 obj.setGenre(genreDAO.create(obj.getGenre()));
             }
+
             if (obj.getEdition().getId() == 0) {
                 EditionDAO editionDAO = new EditionDAO();
-                obj.setEdition(editionDAO.create(obj.getGenre()));
+                obj.setEdition(editionDAO.create(obj.getEdition()));
             }
+
+            PreparedStatement prepare = this.connect
+                    .prepareStatement(
+                            "INSERT INTO document (title, pages_nbr, id_edition, id_genre, year) VALUES(?, ?, ?, ?, ?)",
+                            Statement.RETURN_GENERATED_KEYS);
+            prepare.setString(1, obj.getTitle());
+            prepare.setInt(2, obj.getPages_nbr());
+            prepare.setInt(3, obj.getEdition().getId());
+            prepare.setInt(4, obj.getGenre().getId());
+            prepare.setString(5, obj.getYear());
+
+            prepare.executeUpdate();
+            ResultSet rs = prepare.getGeneratedKeys();
+            if (rs != null && rs.next()) {
+                int key = rs.getInt(1);
+                obj = this.find(key);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+        return obj;
     }
 
     @Override
     public Document update(Document obj) {
-        return null;
+        try {
+            GenreDAO genreDAO = new GenreDAO();
+            if (obj.getGenre().getId() == 0) {
+                obj.setGenre(genreDAO.create(obj.getGenre()));
+            }
+            genreDAO.update(obj.getGenre());
+
+            EditionDAO editionDAO = new EditionDAO();
+            if (obj.getEdition().getId() == 0) {
+                obj.setEdition(editionDAO.create(obj.getEdition()));
+            }
+            editionDAO.update(obj.getEdition());
+
+            this.connect
+                    .createStatement(
+                            ResultSet.TYPE_SCROLL_INSENSITIVE,
+                            ResultSet.CONCUR_UPDATABLE)
+                    .executeUpdate(
+                            "UPDATE document SET title = '" + obj.getTitle() + "'," +
+                                    " pages_nbr = '" + obj.getPages_nbr() + "', " +
+                                    " id_edition = '" + obj.getEdition().getId() + "', " +
+                                    " id_genre = '" + obj.getGenre().getId() + "', " +
+                                    " year = '" + obj.getYear() + "'");
+            obj = this.find(obj.getId());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return obj;
     }
 
     @Override
     public void delete(Document obj) {
-
+        try {
+            this.connect
+                .createStatement(
+                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_UPDATABLE
+                ).executeUpdate(
+                    "DELETE FROM document WHERE id_document = " + obj.getId()
+                );
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

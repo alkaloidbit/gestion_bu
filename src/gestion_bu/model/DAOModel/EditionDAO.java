@@ -4,8 +4,10 @@ import gestion_bu.model.DAO;
 import gestion_bu.model.Edition;
 import gestion_bu.model.Edition;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class EditionDAO extends DAO<Edition> {
     @Override

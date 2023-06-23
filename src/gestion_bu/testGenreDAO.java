@@ -16,7 +16,7 @@ public class testGenreDAO {
         Genre genre0 = new Genre();
         genre0.setName("Nouveau genre");
 
-        genreDAO.create(genre0);
+        System.out.println(genreDAO.create(genre0));
 
     }
 }
