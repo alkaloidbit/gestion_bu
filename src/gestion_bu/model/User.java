@@ -78,6 +78,7 @@ public class User {
         str +=             "NOM : " + this.getLast_name() + "\n";
         str +=             "PRENOM : " + this.getFirst_name() + "\n";
         str +=             "email : " + this.getEmail() + "\n";
+        str +=             "passwd : " + this.getPasswd() + "\n";
         str +=             "isAdmin: " + this.getIs_admin() + "\n";
         str +=            "\n.....................................\n";
 

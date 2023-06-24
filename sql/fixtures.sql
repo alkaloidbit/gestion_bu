@@ -2,10 +2,11 @@
 USE `gestion_bu`;
 
 -- Users --
-INSERT INTO `user` ( `is_admin`, `first_name`, `last_name`, `email`, `passwd`) VALUES (1, 'Frédéric', 'Oudjoudi', 'fredoudjoudi@gmail.com', 'foo');
-INSERT INTO `user` ( `is_admin`, `first_name`, `last_name`, `email`, `passwd`) VALUES (1, 'Frédéric', 'Oudjoudi', 'fo', 'foo');
-INSERT INTO `user` ( `is_admin`, `first_name`, `last_name`, `email`, `passwd`) VALUES (0, 'Clive', 'Roberts', 'cliveroberts@ucsql.com', 'foo');
-INSERT INTO `user` ( `is_admin`, `first_name`, `last_name`, `email`, `passwd`) VALUES (0, 'Clive', 'Roberts', 'cr', 'foo');
+INSERT INTO `user` (`id_user`, `is_admin`, `first_name`, `last_name`, `email`, `passwd`) VALUES (NULL, 1, 'Frédéric', 'Oudjoudi', 'fredoudjoudi@gmail.com', 'DzS/wHe/Jw2uw/bCL3HGzMsdYDSDR7kHcx/8Yb2Jqd8=');
+INSERT INTO `user` (`id_user`, `is_admin`, `first_name`, `last_name`, `email`, `passwd`) VALUES (NULL, 0, 'Clive', 'Roberts', 'cliveroberts@ucsql.com', 'DzS/wHe/Jw2uw/bCL3HGzMsdYDSDR7kHcx/8Yb2Jqd8=');
+INSERT INTO `user` (`id_user`, `is_admin`, `first_name`, `last_name`, `email`, `passwd`) VALUES (NULL, 1, 'fred', 'oudjoudi', 'fo', 'DzS/wHe/Jw2uw/bCL3HGzMsdYDSDR7kHcx/8Yb2Jqd8=');
+INSERT INTO `user` (`id_user`, `is_admin`, `first_name`, `last_name`, `email`, `passwd`) VALUES (NULL, 0, 'Clive', 'Roberts', 'cr', 'DzS/wHe/Jw2uw/bCL3HGzMsdYDSDR7kHcx/8Yb2Jqd8=');
+
 
 INSERT INTO `edition` ( `name`) VALUES ( 'Hoboken, NJ : John Wiley & Sons, Inc.');
 INSERT INTO `genre` ( `name`) VALUES ( 'For dummies');

@@ -1,5 +1,6 @@
 package gestion_bu;
 
+import gestion_bu.testUserDAO;
 import gestion_bu.model.Author;
 import gestion_bu.model.Document;
 import gestion_bu.model.User;
@@ -16,10 +17,13 @@ import java.sql.*;
 
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        testDocumentDAO td = new testDocumentDAO();
-        td.testCrud();
+//        testDocumentDAO td = new testDocumentDAO();
+//        td.testCrud();
 
         // testGenreDAO tg = new testGenreDAO();
         // tg.testCrud();
+
+        testUserDAO tu = new testUserDAO();
+        tu.testCrud();
     }
 }
