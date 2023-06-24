@@ -1,17 +1,12 @@
 package gestion_bu.model.DAOModel;
 
-import gestion_bu.model.Author;
-import gestion_bu.model.DAO;
-import gestion_bu.model.Document;
+import gestion_bu.model.*;
 
-import javax.xml.transform.Result;
-import java.sql.Array;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 
 public class DocumentDAO extends DAO<Document> {
 
@@ -68,6 +63,12 @@ public class DocumentDAO extends DAO<Document> {
             e.printStackTrace();
         }
         return document;
+    }
+
+    @Override
+    public ArrayList<Document> findAll() {
+
+        return null;
     }
 
     @Override

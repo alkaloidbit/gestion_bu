@@ -1,5 +1,7 @@
 package gestion_bu;
 
+import java.util.ArrayList;
+
 import gestion_bu.model.User;
 import gestion_bu.model.DAOModel.UserDAO;
 
@@ -24,12 +26,17 @@ public class testUserDAO {
 		u2.setPasswd("foo");
 		u2.setIs_admin(1);
 		
-		System.out.println(u3);
 		User u3 = udao.create(u2);
+		System.out.println(u3);
 
 		// delete
 		// deletion successful
 		// udao.delete(u);
+		ArrayList<User> users = udao.findAll();
+		for(User user : users) {
+			System.out.println(user);
+		}
+			
 	}
 	
 }

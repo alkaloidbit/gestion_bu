@@ -1,14 +1,15 @@
 package gestion_bu.model;
 
 
-import gestion_bu.model.ConnectionMariaDB;
-
 import java.sql.Connection;
+import java.util.ArrayList;
 
 public abstract  class DAO<T> {
     public Connection connect = ConnectionMariaDB.getInstance();
 
     public abstract T find(int id);
+
+    public abstract ArrayList<T> findAll();
 
     public abstract T create(T obj);
 

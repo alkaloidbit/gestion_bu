@@ -9,6 +9,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDAO extends DAO<User> {
 
@@ -44,15 +46,92 @@ public class UserDAO extends DAO<User> {
         return user;
     }
 
-    public User login(String email, String passwd) {
-        User user = new User();
+    @Override
+    public ArrayList<User> findAll() {
+        List<User> users = new ArrayList<>();
+        try {
+            ResultSet results = connect
+                    .createStatement()
+                    .executeQuery(
+                            "SELECT * FROM user"
+                    );
+            while ( results.next() ) {
+                User user = new User();
+                user.setFirst_name(results.getString("first_name"));
+                user.setLast_name(results.getString("last_name"));
+                user.setId(results.getInt("id_user"));
+                user.setEmail(results.getString("email"));
+                user.setIs_admin(results.getInt("is_admin"));
+                user.setPasswd(results.getString("passwd"));
+                users.add(user);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return (ArrayList<User>) users;
+    }
+
+    public ArrayList<User> findNameWithParam(String searchParam) {
+        List<User> users = new ArrayList<>();
+        try {
+            ResultSet results = connect
+                    .createStatement()
+                    .executeQuery(
+                            "SELECT * FROM user WHERE first_name LIKE '%" + searchParam + "%' OR last_name LIKE '%" + searchParam +"%'" 
+                    );
+            while ( results.next() ) {
+                User user = new User();
+                user.setId(results.getInt("id_user"));
+                user.setLast_name(results.getString("last_name"));
+                user.setFirst_name(results.getString("first_name"));
+                user.setIs_admin(results.getInt("is_admin"));
+                user.setPasswd(results.getString("password"));
+                user.setEmail(results.getString("email"));
+                users.add(user);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return (ArrayList<User>) users;
+    }
+
+    public User findByEmail(String userEmail) {
         try {
            ResultSet result = this.connect
                    .createStatement(
                            ResultSet.TYPE_SCROLL_INSENSITIVE,
                            ResultSet.CONCUR_UPDATABLE
                    )
-                   .executeQuery("SELECT * FROM user WHERE email = '" + email + "' AND passwd = '" + passwd + "'");
+                   .executeQuery("SELECT * FROM user WHERE email = '" + userEmail + "'");
+            if (result.first()) {
+                User user = new User(
+                        result.getInt("id_user"),
+                        result.getInt("is_admin"),
+                        result.getString("first_name"),
+                        result.getString("last_name"),
+                        result.getString("email"),
+                        result.getString("passwd")
+                );
+                return user;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public User login(String email, String passwd) {
+        User user = new User();
+        String hashedPassword = this.passwordHasher.hashPassword(passwd, this.salt);
+        try {
+           ResultSet result = this.connect
+                   .createStatement(
+                           ResultSet.TYPE_SCROLL_INSENSITIVE,
+                           ResultSet.CONCUR_UPDATABLE
+                   )
+                   .executeQuery("SELECT * FROM user WHERE email = '" + email + "' AND passwd = '" + hashedPassword + "'");
             if (result.first())
                 user = new User(
                         result.getInt("id_user"),
@@ -66,6 +145,15 @@ public class UserDAO extends DAO<User> {
             e.printStackTrace();
         }
         return user;
+    }
+    public boolean checkValidUser(String userEmail, String userPassword) {
+        User userInDB = findByEmail(userEmail);
+        String hashedPassword = this.passwordHasher.hashPassword(userPassword, this.salt);
+
+        if(userInDB != null && userInDB.getPasswd().equals(hashedPassword)){
+            return true;
+        }
+        return false;
     }
 
     @Override

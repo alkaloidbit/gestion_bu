@@ -2,11 +2,13 @@ package gestion_bu.model.DAOModel;
 
 import gestion_bu.model.DAO;
 import gestion_bu.model.Genre;
+import gestion_bu.model.User;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 public class GenreDAO extends DAO<Genre> {
 
@@ -31,6 +33,12 @@ public class GenreDAO extends DAO<Genre> {
         }
 
         return  genre;
+    }
+
+    @Override
+    public ArrayList<Genre> findAll() {
+
+        return null;
     }
 
     @Override

@@ -2,12 +2,13 @@ package gestion_bu.model.DAOModel;
 
 import gestion_bu.model.DAO;
 import gestion_bu.model.Edition;
-import gestion_bu.model.Edition;
+import gestion_bu.model.User;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 public class EditionDAO extends DAO<Edition> {
     @Override
@@ -30,6 +31,12 @@ public class EditionDAO extends DAO<Edition> {
         }
 
         return edition;
+    }
+
+    @Override
+    public ArrayList<Edition> findAll() {
+
+        return null;
     }
 
     @Override
